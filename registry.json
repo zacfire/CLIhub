@@ -1,0 +1,378 @@
+{
+  "version": "1.0",
+  "clis": [
+    {
+      "id": "gh",
+      "name": "GitHub CLI",
+      "description": "GitHub's official CLI — PRs, issues, code review, repo management. The most-used CLI by AI agents.",
+      "repo": "https://github.com/cli/cli",
+      "tags": ["git", "github", "code", "pr", "issues", "code-review", "devops"],
+      "official": true,
+      "install": {
+        "brew": "brew install gh",
+        "winget": "winget install --id GitHub.cli",
+        "apt": "apt install gh"
+      },
+      "commands_count": 100,
+      "key_commands": [
+        "gh pr create --title <title> --body <body>",
+        "gh pr list --json title,url",
+        "gh issue create --title <title> --body <body>",
+        "gh repo clone <owner>/<repo>",
+        "gh api repos/<owner>/<repo>/contents/<path>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": true,
+        "json_output": true
+      },
+      "claude_code_stack": true,
+      "category": "code"
+    },
+    {
+      "id": "stripe-cli",
+      "name": "Stripe CLI",
+      "description": "Stripe's official CLI for payment integration — build, test, and manage payments. Claude Code's default payment pick (91%).",
+      "repo": "https://github.com/stripe/stripe-cli",
+      "tags": ["payment", "billing", "subscription", "finance", "commerce", "checkout"],
+      "official": true,
+      "install": {
+        "brew": "brew install stripe/stripe-cli/stripe",
+        "apt": "apt install stripe",
+        "docker": "docker run --rm -it stripe/stripe-cli"
+      },
+      "commands_count": 50,
+      "key_commands": [
+        "stripe payments list",
+        "stripe listen --forward-to localhost:4242/webhook",
+        "stripe trigger payment_intent.succeeded",
+        "stripe customers create --email <email>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": true,
+      "category": "payment"
+    },
+    {
+      "id": "resend-cli",
+      "name": "Resend CLI",
+      "description": "Resend's official email CLI — 53 commands for emails, domains, contacts, broadcasts. Claude Code's default email pick (63%).",
+      "repo": "https://github.com/resend/resend-cli",
+      "tags": ["email", "marketing", "contacts", "notifications", "newsletters"],
+      "official": true,
+      "install": {
+        "curl": "curl -fsSL https://resend.com/install.sh | bash",
+        "npm": "npm install -g resend-cli"
+      },
+      "commands_count": 53,
+      "key_commands": [
+        "resend emails send --from <from> --to <to> --subject <subject> --text <body>",
+        "resend domains list",
+        "resend contacts create --email <email> --audience-id <id>",
+        "resend doctor"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": true,
+      "category": "email"
+    },
+    {
+      "id": "jina-cli",
+      "name": "Jina CLI",
+      "description": "All Jina AI APIs as Unix CLI — search, read, embed, rerank, pdf extraction. Supports pipes.",
+      "repo": "https://github.com/jina-ai/cli",
+      "tags": ["search", "embedding", "rerank", "ai", "nlp", "web-scraping", "pdf"],
+      "official": true,
+      "install": {
+        "pip": "pip install jina-cli"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "jina search <query>",
+        "jina read <url>",
+        "jina embed <text>",
+        "jina rerank <query> <documents>",
+        "jina pdf <file>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": true,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "search"
+    },
+    {
+      "id": "ctx7",
+      "name": "Context7 CLI",
+      "description": "Query up-to-date documentation of 24,000+ libraries. Includes Skill Wizard for generating agent skills.",
+      "repo": "https://github.com/upstash/context7",
+      "tags": ["documentation", "libraries", "reference", "skills", "knowledge"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g ctx7"
+      },
+      "commands_count": 5,
+      "key_commands": [
+        "ctx7 docs /vercel/next.js \"app router\"",
+        "ctx7 search <library>",
+        "ctx7 skill wizard"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": true,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "documentation"
+    },
+    {
+      "id": "kraken-cli",
+      "name": "Kraken CLI",
+      "description": "First AI-native crypto trading CLI — 134 commands for spot, futures, staking. Built-in MCP server and paper trading.",
+      "repo": "https://github.com/krakenfx/kraken-cli",
+      "tags": ["crypto", "trading", "finance", "defi", "staking", "futures", "bitcoin"],
+      "official": true,
+      "install": {
+        "brew": "brew install krakenfx/tap/kraken-cli",
+        "curl": "curl -fsSL https://kraken.com/cli/install.sh | bash"
+      },
+      "commands_count": 134,
+      "key_commands": [
+        "kraken trade buy BTC/USD --amount 0.1",
+        "kraken balance",
+        "kraken paper trade buy BTC/USD --amount 1",
+        "kraken ws ticker BTC/USD"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": true,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "trading"
+    },
+    {
+      "id": "google-workspace-cli",
+      "name": "Google Workspace CLI",
+      "description": "Google's official CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin. Includes AI agent skills.",
+      "repo": "https://github.com/googleworkspace/cli",
+      "tags": ["google", "drive", "gmail", "calendar", "sheets", "docs", "office", "productivity"],
+      "official": true,
+      "install": {
+        "brew": "brew install googleworkspace/tap/workspace-cli"
+      },
+      "commands_count": 80,
+      "key_commands": [
+        "workspace gmail send --to <to> --subject <subject> --body <body>",
+        "workspace drive list",
+        "workspace calendar events list",
+        "workspace sheets get <spreadsheet-id>"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "productivity"
+    },
+    {
+      "id": "agent-browser",
+      "name": "agent-browser",
+      "description": "Vercel's browser automation CLI for AI agents. Rust-built, structured output for agent consumption.",
+      "repo": "https://github.com/vercel-labs/agent-browser",
+      "tags": ["browser", "automation", "web", "scraping", "testing"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @vercel/agent-browser"
+      },
+      "commands_count": 20,
+      "key_commands": [
+        "agent-browser navigate <url>",
+        "agent-browser click <selector>",
+        "agent-browser extract <url> --schema <schema>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "browser"
+    },
+    {
+      "id": "bb-browser",
+      "name": "bb-browser",
+      "description": "Browser automation using your real Chrome — existing login sessions, cookies, no automation fingerprint.",
+      "repo": "https://github.com/epiral/bb-browser",
+      "tags": ["browser", "automation", "chrome", "scraping", "login"],
+      "official": false,
+      "install": {
+        "npm": "npm install -g bb-browser"
+      },
+      "commands_count": 15,
+      "key_commands": [
+        "bb navigate <url>",
+        "bb click <selector>",
+        "bb screenshot"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "browser"
+    },
+    {
+      "id": "xiaohongshu-cli",
+      "name": "xiaohongshu-cli",
+      "description": "CLI for Xiaohongshu (小红书) — search, read, interact, post. Part of a series including bilibili-cli, twitter-cli, discord-cli, tg-cli.",
+      "repo": "https://github.com/jackwener/xiaohongshu-cli",
+      "tags": ["social", "xiaohongshu", "redbook", "chinese", "content", "marketing"],
+      "official": false,
+      "install": {
+        "npm": "npm install -g xiaohongshu-cli"
+      },
+      "commands_count": 20,
+      "key_commands": [
+        "xhs search <query>",
+        "xhs read <note-id>",
+        "xhs post --title <title> --content <content>"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "social"
+    },
+    {
+      "id": "twitter-cli",
+      "name": "twitter-cli",
+      "description": "CLI for Twitter/X — feed, bookmarks, user timeline, posting. Structured YAML/JSON output.",
+      "repo": "https://github.com/jackwener/twitter-cli",
+      "tags": ["social", "twitter", "x", "content", "feed", "posting"],
+      "official": false,
+      "install": {
+        "npm": "npm install -g @jackwener/twitter-cli"
+      },
+      "commands_count": 15,
+      "key_commands": [
+        "twitter feed",
+        "twitter bookmarks",
+        "twitter post <text>",
+        "twitter user <username>"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "social"
+    },
+    {
+      "id": "polymarket-cli",
+      "name": "Polymarket CLI",
+      "description": "Official CLI + agent framework for autonomous prediction market trading.",
+      "repo": "https://github.com/Polymarket/agents",
+      "tags": ["prediction", "market", "trading", "betting", "finance"],
+      "official": true,
+      "install": {
+        "pip": "pip install polymarket-agents"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "polymarket markets list",
+        "polymarket trade --market <id> --outcome <yes/no> --amount <amount>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "trading"
+    },
+    {
+      "id": "terminalwire",
+      "name": "Terminalwire",
+      "description": "Stream server-side CLI apps to users via WebSocket. Ship a CLI for your SaaS in days.",
+      "repo": "https://terminalwire.com/",
+      "tags": ["saas", "cli-framework", "websocket", "remote"],
+      "official": true,
+      "install": {
+        "gem": "gem install terminalwire"
+      },
+      "commands_count": 5,
+      "key_commands": [
+        "terminalwire new <app-name>",
+        "terminalwire serve"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": false
+      },
+      "claude_code_stack": false,
+      "category": "framework"
+    },
+    {
+      "id": "dreamer",
+      "name": "Dreamer",
+      "description": "CLI platform designed for agents more than humans. Build, validate, test, deploy — all without GUI.",
+      "repo": "https://blog.singleton.io/posts/2026-02-17-introducing-dreamer/",
+      "tags": ["deploy", "build", "test", "ci", "devops"],
+      "official": true,
+      "install": {
+        "curl": "curl -fsSL https://dreamer.sh/install | bash"
+      },
+      "commands_count": 30,
+      "key_commands": [
+        "dreamer build",
+        "dreamer test",
+        "dreamer deploy"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "devops"
+    },
+    {
+      "id": "agent-clip",
+      "name": "agent-clip",
+      "description": "Single-tool agent architecture: one run(command) replaces tool catalogs. Unix pipes, chains, progressive --help, two-layer architecture.",
+      "repo": "https://mp.weixin.qq.com/s/kK9BdEDORWzx-Pb_Ie_36Q",
+      "tags": ["agent", "unix", "shell", "framework", "single-tool"],
+      "official": false,
+      "install": {
+        "go": "go install github.com/anthropics/agent-clip@latest"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "run(command=\"cat file.txt | grep ERROR | wc -l\")",
+        "run(command=\"see screenshot.png\")",
+        "run(command=\"memory search 'query'\")"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "framework"
+    }
+  ]
+}
