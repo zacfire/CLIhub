@@ -373,6 +373,57 @@
       },
       "claude_code_stack": false,
       "category": "framework"
+    },
+    {
+      "id": "xurl",
+      "name": "xurl (X/Twitter Official CLI)",
+      "description": "X/Twitter's official CLI. Agent-optimized with action chaining, SKILL.md, OpenClaw integration. OAuth 1.0a/2.0, streaming, pagination, rate-limit retries.",
+      "repo": "https://github.com/xdevplatform/xurl",
+      "tags": ["twitter", "x", "social", "posting", "feed", "search", "oauth"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @xdevplatform/xurl"
+      },
+      "commands_count": 30,
+      "key_commands": [
+        "xurl get /2/tweets/:id",
+        "xurl post /2/tweets -d '{\"text\": \"Hello\"}'",
+        "xurl get /2/tweets/search/recent -d '{\"query\": \"AI agents\"}'",
+        "xurl get /2/users/me"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "social"
+    },
+    {
+      "id": "bird",
+      "name": "bird",
+      "description": "Fast X/Twitter CLI — tweet, reply, read timelines, search, mentions. GraphQL API with browser cookie auth. Popular in agent workflows.",
+      "repo": "https://github.com/steipete/bird",
+      "tags": ["twitter", "x", "social", "posting", "timeline", "search"],
+      "official": false,
+      "install": {
+        "npm": "npm install -g bird",
+        "brew": "brew install bird"
+      },
+      "commands_count": 15,
+      "key_commands": [
+        "bird tweet \"Hello world\"",
+        "bird timeline",
+        "bird search \"AI agents\"",
+        "bird mentions"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "social"
     }
   ]
 }
