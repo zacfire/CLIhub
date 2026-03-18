@@ -11,26 +11,26 @@ When you need a CLI tool for a task, use CLIHub to find it.
 
 ```bash
 # Search by intent
-clihub search "send email"
-clihub search "crypto trading"
-clihub search "browser automation"
+npx @zacfire/clihub search "send email"
+npx @zacfire/clihub search "crypto trading"
+npx @zacfire/clihub search "browser automation"
 
 # Get details
-clihub info resend-cli
-clihub info gh
+npx @zacfire/clihub info resend-cli
+npx @zacfire/clihub info gh
 
 # List all
-clihub list
-clihub list --category payment
-clihub list --official
+npx @zacfire/clihub list
+npx @zacfire/clihub list --category payment
+npx @zacfire/clihub list --official
 
 # Get install command
-clihub install resend-cli
-clihub install kraken-cli --method brew
+npx @zacfire/clihub install resend-cli
+npx @zacfire/clihub install kraken-cli --method brew
 
 # JSON output for structured consumption
-clihub search "email" --json
-clihub info gh --json
+npx @zacfire/clihub search "email" --json
+npx @zacfire/clihub info gh --json
 ```
 
 ## When to Use
