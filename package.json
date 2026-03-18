@@ -1,5 +1,5 @@
 {
-  "name": "clihub",
+  "name": "@zacfire/clihub",
   "version": "1.0.0",
   "description": "CLI discovery service for AI Agents — find the right CLI tool for any task",
   "type": "module",
