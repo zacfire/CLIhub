@@ -424,6 +424,105 @@
       },
       "claude_code_stack": false,
       "category": "social"
+    },
+    {
+      "id": "elevenlabs-cli",
+      "name": "ElevenLabs CLI",
+      "description": "ElevenLabs' official voice agent CLI — agent-first by default (non-interactive). Manage voice agents as code, CI/CD deploy, templates for customer service/assistant.",
+      "repo": "https://github.com/elevenlabs/cli",
+      "tags": ["voice", "audio", "tts", "speech", "agent", "ai"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @elevenlabs/cli"
+      },
+      "commands_count": 20,
+      "key_commands": [
+        "elevenlabs init",
+        "elevenlabs deploy",
+        "elevenlabs agents list",
+        "elevenlabs test run"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "voice"
+    },
+    {
+      "id": "officecli",
+      "name": "OfficeCLI",
+      "description": "World's first Office suite for AI agents. Read, edit, automate Word/Excel/PowerPoint. Single binary, no Office needed. --json output, live PPT preview, batch mode.",
+      "repo": "https://github.com/iOfficeAI/OfficeCLI",
+      "tags": ["office", "word", "excel", "powerpoint", "ppt", "document", "spreadsheet"],
+      "official": true,
+      "install": {
+        "pip": "pip install officecli"
+      },
+      "commands_count": 30,
+      "key_commands": [
+        "officecli read document.docx",
+        "officecli edit spreadsheet.xlsx --cell A1 --value 100",
+        "officecli create presentation.pptx --template minimal",
+        "officecli watch presentation.pptx"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "office"
+    },
+    {
+      "id": "shadcn-cli",
+      "name": "shadcn/ui CLI v4",
+      "description": "Agent-era UI component CLI. Ships with shadcn/skills for AI agent integration and design system presets. Claude Code's default UI pick (90%).",
+      "repo": "https://ui.shadcn.com/",
+      "tags": ["ui", "components", "react", "design", "frontend"],
+      "official": true,
+      "install": {
+        "npx": "npx shadcn@latest init"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "npx shadcn@latest add button",
+        "npx shadcn@latest add dialog",
+        "npx shadcn@latest diff"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": false
+      },
+      "claude_code_stack": true,
+      "category": "ui"
+    },
+    {
+      "id": "polygon-agent-cli",
+      "name": "Polygon Agent CLI",
+      "description": "Polygon's official onchain toolkit for AI agents. Wallets, stablecoin transfers, swaps, bridging, identity (ERC-8004), reputation.",
+      "repo": "https://github.com/0xPolygon/polygon-agent-cli",
+      "tags": ["crypto", "blockchain", "wallet", "defi", "identity", "onchain", "polygon"],
+      "official": true,
+      "install": {
+        "pip": "pip install polygon-agent-cli"
+      },
+      "commands_count": 20,
+      "key_commands": [
+        "polygon-agent wallet create",
+        "polygon-agent balance",
+        "polygon-agent send --to <address> --amount <amount> --token USDC",
+        "polygon-agent identity register"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "crypto"
     }
   ]
 }
