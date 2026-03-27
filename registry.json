@@ -523,6 +523,127 @@
       },
       "claude_code_stack": false,
       "category": "crypto"
+    },
+    {
+      "id": "sendblue-cli",
+      "name": "Sendblue CLI",
+      "description": "iMessage numbers for your agents. Two commands to give any agent its own iMessage identity. SMS + iMessage API with CLI-first setup.",
+      "repo": "https://github.com/sendblue-api",
+      "tags": ["imessage", "sms", "messaging", "communication", "agent-identity"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @sendblue/cli"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "sendblue setup",
+        "sendblue send --to <phone> --message <text>",
+        "sendblue status"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "messaging"
+    },
+    {
+      "id": "visa-cli",
+      "name": "Visa CLI",
+      "description": "Visa Crypto Labs' experimental CLI for AI agent payments. Agents initiate card payments from terminal without API keys. Beta.",
+      "repo": "https://github.com/nicktomlin/visa-cli",
+      "tags": ["payment", "visa", "card", "finance", "crypto", "agent-payment"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g visa-cli"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "visa pay --amount <amount> --to <merchant>",
+        "visa balance",
+        "visa transactions list"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "payment"
+    },
+    {
+      "id": "ramp-cli",
+      "name": "Ramp CLI",
+      "description": "Ramp's CLI for agent finance operations. Generate Agent Card credentials, manage expenses, automate approvals via Policy Agent.",
+      "repo": "https://ramp.com/",
+      "tags": ["finance", "expense", "card", "approval", "corporate", "agent-card"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @ramp/cli"
+      },
+      "commands_count": 20,
+      "key_commands": [
+        "ramp agent-card --signup",
+        "ramp expenses list",
+        "ramp approve --policy auto"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": true,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "finance"
+    },
+    {
+      "id": "kapso-cli",
+      "name": "Kapso CLI",
+      "description": "WhatsApp numbers for agents. Official Meta Cloud API, no ban risk. 2-minute setup to 3B WhatsApp users. Ships with SKILL.md.",
+      "repo": "https://kapso.ai/",
+      "tags": ["whatsapp", "messaging", "communication", "meta", "agent-identity"],
+      "official": true,
+      "install": {
+        "npm": "npm install -g @kapso/cli"
+      },
+      "commands_count": 15,
+      "key_commands": [
+        "kapso login",
+        "kapso status",
+        "kapso whatsapp messages",
+        "kapso whatsapp conversations"
+      ],
+      "agent_features": {
+        "skill_md": true,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "messaging"
+    },
+    {
+      "id": "discrawl",
+      "name": "Discrawl",
+      "description": "Discord CLI with SQLite backend by steipete. Sync guilds/channels, search messages, list by author/time range. Go single-binary.",
+      "repo": "https://github.com/steipete/discrawl",
+      "tags": ["discord", "social", "chat", "community", "search", "archive"],
+      "official": false,
+      "install": {
+        "go": "go install github.com/steipete/discrawl@latest"
+      },
+      "commands_count": 10,
+      "key_commands": [
+        "discrawl sync --guild <id>",
+        "discrawl search <query>",
+        "discrawl list --channel <id> --author <user>"
+      ],
+      "agent_features": {
+        "skill_md": false,
+        "mcp_server": false,
+        "json_output": true
+      },
+      "claude_code_stack": false,
+      "category": "social"
     }
   ]
 }
